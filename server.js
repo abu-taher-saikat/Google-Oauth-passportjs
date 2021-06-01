@@ -1,6 +1,5 @@
 // const path = require("path");
 const express = require("express");
-const authRoutes = require("./routes/auth-routes");
 const profileRoutes = require("./routes/profile-routes");
 const passport = require("passport");
 const passportSetup = require("./config/passport.setup");
@@ -8,6 +7,7 @@ const mongoose = require("mongoose");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
 
+const authRoutes = require("./routes/auth-routes");
 const app = express();
 // set up static folder
 app.use(express.static(__dirname + "/public"));
